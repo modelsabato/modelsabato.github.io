@@ -1,0 +1,2064 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Procesamiento Digital de Señales Universidad Nacional de Tres de Febrero
+">
+      
+      
+      
+        <link rel="canonical" href="https://pdsuntref.github.io/ejercicios/guia_dtft/">
+      
+      
+        <link rel="prev" href="../guia_sys/">
+      
+      
+        <link rel="next" href="../guia_dft/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>DTFT - Procesamiento Digital de Señales</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/bootstrap-card.css">
+    
+      <link rel="stylesheet" href="../../css/cards.css">
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/fontawesome/all.min.css">
+    
+      <link rel="stylesheet" href="../../css/quotes.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guía-2---transformada-de-fourier-en-tiempo-discreto" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Procesamiento Digital de Señales" class="md-header__button md-logo" aria-label="Procesamiento Digital de Señales" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Procesamiento Digital de Señales
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DTFT
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Inicio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/" class="md-tabs__link">
+          
+  
+    
+  
+  Sobre la materia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../clases/" class="md-tabs__link">
+          
+  
+    
+  
+  Diapositivas de las clases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Guías de ejercicios
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tps/" class="md-tabs__link">
+        
+  
+    
+  
+  Trabajo Práctico
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examenes/" class="md-tabs__link">
+          
+  
+    
+  
+  Evaluaciones pasadas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../extras/" class="md-tabs__link">
+          
+  
+    
+  
+  Extras
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Procesamiento Digital de Señales" class="md-nav__button md-logo" aria-label="Procesamiento Digital de Señales" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Procesamiento Digital de Señales
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Inicio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sobre la materia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diapositivas de las clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guías de ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trabajos Prácticos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examenes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exámenes viejos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../about/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Sobre la materia
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sobre la materia
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programa de la materia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografía
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/calendario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calendario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contacto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contacto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Presentación y fechas importantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../clases/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Diapositivas de las clases
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Diapositivas de las clases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Teoría
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Teoría
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/sys_discretos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Señales y sistemas discretos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/dtft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DTFT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/dft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DFT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/fft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FFT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/tz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TZ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/iir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filtros IIR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/fir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filtros FIR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Práctica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Práctica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/Psys_discretos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Señales y sistemas discretos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/Pdtft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DTFT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/Pdft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DFT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/Ptz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TZ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/Piir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filtros IIR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/Pfir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filtros FIR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Guías de ejercicios
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Guías de ejercicios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia_sys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Señales y sistemas discretos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    DTFT
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia_dft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DFT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia_tz1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TZ señales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia_tz2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TZ sistemas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia_iir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filtros IIR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia_fir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filtros FIR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trabajo Práctico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../examenes/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Evaluaciones pasadas
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Evaluaciones pasadas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examenes/primero/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Primer parcial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examenes/segundo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Segundo parcial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examenes/final/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../extras/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Extras
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Extras
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/tesis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tesis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/seminarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seminarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/tps_jaas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JAAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extras/misc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Videos y recursos útiles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="guía-2---transformada-de-fourier-en-tiempo-discreto">Guía 2 - Transformada de Fourier en tiempo discreto<a class="headerlink" href="#guía-2---transformada-de-fourier-en-tiempo-discreto" title="Permanent link">#</a></h1>
+<ol>
+<li>
+<p>Sea <span class="arithmatex">\(h[n]\)</span> la respuesta al impulso unitario de un sistema LIT, encontrar la respuesta en frecuencia para:</p>
+<ol>
+<li><span class="arithmatex">\(h[n] = \delta[n]+6\delta[n-1]+3\delta[n-2]\)</span></li>
+<li><span class="arithmatex">\(h[n] = \frac{1}{3}^{(n+2)}u[n-2]\)</span></li>
+</ol>
+</li>
+<li>
+<p>Encontrar la Transformada de Fourier (DTFT) de las siguientes señales:</p>
+<ol>
+<li><span class="arithmatex">\(x[n] = (0.5)^{n}u[n+3]\)</span></li>
+<li><span class="arithmatex">\(x[n] = \alpha^{n}sen(n\omega_0)u[n]\)</span></li>
+<li><span class="arithmatex">\(x[n] = \alpha^{n}u[n-5]\)</span></li>
+<li><span class="arithmatex">\(x[n]= 
+\begin{cases}
+\left(\dfrac{1}{2}\right)^{n}       &amp; \quad n = \text{0,2,4,...}\\
+\hspace{10pt} 0          &amp; \quad \text{} \text{resto}
+\end{cases}\)</span></li>
+</ol>
+</li>
+<li>
+<p>Calcular la respuesta al impulso unitario del filtro pasa bajos ideal, de amplitud unitaria y frecuencia de corte <span class="arithmatex">\(\omega_c\)</span>.</p>
+</li>
+<li>
+<p>Sea <span class="arithmatex">\(h[n]\)</span> la respuesta al impulso unitario del filtro pasa bajos calculado en el problema anterior, ¿qué tipo de filtro tiene como respuesta al impulso unitario <span class="arithmatex">\(g[n]=(-1)^{n}h[n]\)</span>?</p>
+</li>
+<li>
+<p>Considerando un filtro pasa altos con una frecuencia de corte <span class="arithmatex">\(\omega_c = \frac{3\pi}{4}\)</span>, calcular la respuesta al impulso unitario <span class="arithmatex">\(h[n]\)</span>.</p>
+</li>
+<li>
+<p>Dados dos filtros ideales definidos a partir de sus respuestas en frecuencia, encontrar la respuesta en frecuencia de un nuevo sistema que tenga las respuestas <span class="arithmatex">\(H_1\)</span> y <span class="arithmatex">\(H_2\)</span>:</p>
+<ol>
+<li>En cascada.</li>
+<li>En paralelo.</li>
+</ol>
+<div class="arithmatex">\[ H_1({e^{j\omega}}) = 
+\begin{cases}
+  1      &amp; \quad  |\omega| &gt; \dfrac{\pi}{3}\\
+  0          &amp; \quad \text{} \text{resto}
+\end{cases}\]</div>
+<div class="arithmatex">\[H_2({e^{j\omega}}) = 
+\begin{cases}
+1       &amp; \quad \dfrac{\pi}{4} &lt; |\omega| &lt; \dfrac{3\pi}{4}\\
+0        &amp; \quad \text{} \text{resto}
+\end{cases} 
+\]</div>
+</li>
+<li>
+<p>Encontrar la respuesta en frecuencia <span class="arithmatex">\(H(e^{jw})\)</span> de un sistema que retarda la entrada en <span class="arithmatex">\(n_r\)</span> muestras.</p>
+<div class="arithmatex">\[ y[n] = x[n-n_r] \]</div>
+</li>
+<li>
+<p>Indicar cuáles de las siguientes señales de tiempo discreto son autofunciones de sistemas discretos LTI estables:</p>
+<ol>
+<li><span class="arithmatex">\(e^{j(2\pi)n/3}\)</span></li>
+<li><span class="arithmatex">\(3^{n}\)</span></li>
+<li><span class="arithmatex">\(2^nu[-n-1]\)</span></li>
+<li><span class="arithmatex">\(cos(\omega_0n)\)</span></li>
+<li><span class="arithmatex">\((1/4)^n\)</span></li>
+<li><span class="arithmatex">\((1/4)^nu[n]+4^nu[-n-1]\)</span></li>
+</ol>
+</li>
+<li>
+<p>Encontrar la respuesta del sistema dado por la siguiente ecuación en diferencias con coeficientes constantes.</p>
+<div class="arithmatex">\[ y[n] = 1.3433y[n-1] - 0.9025y[n-2] + x[n] - 1.4142x[n-1] + x[n-2] \]</div>
+</li>
+<li>
+<p>Calcular la solución de la siguiente ecuación en diferencias con condiciones iniciales nulas, considerando <span class="arithmatex">\(x[n] = \delta [n]\)</span>.</p>
+<div class="arithmatex">\[ y[n] - 0.25y[n-1] = x[n] - x[n-2] \]</div>
+</li>
+<li>
+<p>Dado un sistema LIT que representa a un filtro digital ideal cuya entrada es <span class="arithmatex">\(x[n]\)</span>, su salida <span class="arithmatex">\(y[n]\)</span> y su respuesta en frecuencia <span class="arithmatex">\(H(e^{jw})\)</span>, encontrar:</p>
+<ol>
+<li>La respuesta en frecuencia de la señal de entrada <span class="arithmatex">\(X(e^{jw})\)</span>.</li>
+<li>La respuesta al impulso <span class="arithmatex">\(h[n]\)</span> del filtro ideal <span class="arithmatex">\(H(e^{jw})\)</span>.</li>
+<li>La salida del sistema <span class="arithmatex">\(y[n]\)</span>.</li>
+<li>Graficar la magnitud de la respuesta en frecuencia de la salida del sistema <span class="arithmatex">\(Y(e^{jw})\)</span>.</li>
+</ol>
+<p>Datos del sistema:</p>
+<div class="arithmatex">\[ x[n]= e^{j0.55\pi n} + 2 cos \left(\dfrac{3}{4}\pi n\right) \]</div>
+<div class="arithmatex">\[ \begin{cases}
+H({e^{j\omega}}) = 0 \hspace{12pt}     &amp; 0 \leq |\omega| \leq 0.5\pi \\
+H({e^{j\omega}}) = 1 \hspace{12pt}     &amp; 0.5 \pi &lt; |\omega| \leq 0.6\pi \\
+H({e^{j\omega}}) = 0.5 \hspace{12pt}     &amp; 0.6 \pi &lt; |\omega| \leq \pi \\
+\end{cases} \]</div>
+</li>
+<li>
+<p>Siendo la Transformada de Fourier de una señal <span class="arithmatex">\(x[n] \leftrightarrow X(e^{jw})\)</span>, se puede demostrar que la transformada de su conjugada es <span class="arithmatex">\(x^\ast [n] \leftrightarrow X^\ast (e^{-jw})\)</span>. Usando este resultado, determinar si la transformada de las siguientes señales es conjugada Simétrica/Asimética, e indicar qué tipo de paridad tiene el módulo y la fase de la transformada para los siguientes casos:</p>
+<ol>
+<li><span class="arithmatex">\(x[n]\)</span> real.</li>
+<li><span class="arithmatex">\(x[n]\)</span> imaginaria.</li>
+</ol>
+</li>
+<li>
+<p>Calcular la DTFT de las siguientes ventanas. Indicar cuáles de ellas son <em>causales</em>.</p>
+<ol>
+<li>Ventana rectangular, 
+<span class="arithmatex">\(w_1[n]=
+\begin{cases}
+1       &amp; \quad 0 \leq n \leq M\\
+0        &amp; \quad \text{} \text{resto}
+\end{cases}\)</span></li>
+<li>Ventana rectangular (centrada en 0),
+<span class="arithmatex">\(w_2[n] = 
+\begin{cases}
+1       &amp; \quad \dfrac{-M-1}{2} \leq n \leq \dfrac{M-1}{2}\\
+0        &amp; \quad \text{} \text{resto}
+\end{cases}\)</span></li>
+<li>Ventana triangular (<em>Bartlett</em>),
+<span class="arithmatex">\(w_3[n]=
+\begin{cases}
+1 - \left | \dfrac{n - M/2}{M/2}\right |      &amp; \quad 0 \leq n \leq M\\
+0        &amp; \quad \text{} \text{resto}
+\end{cases}\)</span></li>
+</ol>
+</li>
+<li>
+<p>Implementar en algún lenguaje de programación de su elección las siguientes ventanas. Las mismas deben cumplir con la propiedad de causalidad.</p>
+<ol>
+<li>Ventana rectangular.</li>
+<li>Ventana triangular.</li>
+<li>Ventana de Hann(ing).</li>
+</ol>
+<p>Graficar la magnitud de sus respuestas en frecuencia a partir de:</p>
+<ol>
+<li>Utilizar un número de muestras <span class="arithmatex">\(M = 50\)</span>.</li>
+<li>Utilizar un número de muestras <span class="arithmatex">\(M = 140\)</span>.</li>
+<li>Utilizar un número de muestras <span class="arithmatex">\(M = 250\)</span>.</li>
+</ol>
+<p>Para todos los casos:</p>
+<ol>
+<li>¿De qué manera varía el ancho del lóbulo principal para cada caso?</li>
+<li>¿Qué cambios se observan en la amplitud relativa entre el lóbulo principal y el lóbulo secundario?</li>
+</ol>
+</li>
+</ol>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Última actualización">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 8, 2024</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contribuidores">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:marzikg@gmail.com">GuillermoMarzik</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Licencia: CC-BY-SA 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/fontawesome/all.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
