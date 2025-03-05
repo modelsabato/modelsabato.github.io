@@ -1,9 +1,8 @@
-site_name: Procesamiento Digital de Señales
+site_name: Modelización de Materiales
 site_description: >
-  Procesamiento Digital de Señales
-  Universidad Nacional de Tres de Febrero
+  Materia Modelización de Materiales y Procesos
+  Instituto Sabato
 site_dir: _site
-site_url: "https://pdsuntref.github.io"
 copyright: "Licencia: CC-BY-SA 4.0"
 
 theme:
