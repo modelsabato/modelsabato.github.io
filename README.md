@@ -1,3 +1,3 @@
-# Modelizacion de Materiales
+# Modelización de Materiales
 
-Clases teoricas y guias de problemas de la Materia Modelizacion de Materiales y Procesos, Ingenieria en Materiales, Instituto Saabato
+Clases teóricas y guías de problemas de la Materia Modelización de Materiales y Procesos, Ingeniería en Materiales, Instituto Saabato
