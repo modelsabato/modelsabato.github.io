@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 site_name: Modelización de Propiedades y Procesos
 site_description: >
   Modelización de Propiedades y Procesos
   Ingeniería en Materiales - Instituto Sábato
 site_dir: _site
 site_url: "https://modelsabato.github.io"
-=======
-site_name: Modelización de Materiales
-site_description: >
-  Materia Modelización de Materiales y Procesos
-  Instituto Sabato
-site_dir: _site
->>>>>>> 93f82cbbe6ca3c2e70bc7dd079f41c852d065163
 copyright: "Licencia: CC-BY-SA 4.0"
 
 theme:
