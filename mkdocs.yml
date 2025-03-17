@@ -8,7 +8,7 @@ copyright: "Licencia: CC-BY-SA 4.0"
 
 theme:
   name: material
-  logo: 'img/logo.png'
+  logo: 'img/sabato.png'
   language: es
   features:
     - content.code.annotate
@@ -105,7 +105,6 @@ nav:
     - Bibliografía: about/bibliografia.md
     - Calendario: about/calendario.md
     - Contacto: about/contacto.md
-    - Presentación y fechas importantes: about/intro.md
   - Diapositivas de las clases: 
     - clases/README.md
     - Teoría:
