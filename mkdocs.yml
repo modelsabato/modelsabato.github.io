@@ -97,8 +97,6 @@ nav:
     - Diapositivas de las clases: clases/README.md
     - Guías de ejercicios: ejercicios/README.md
     - Trabajos Prácticos: tps/README.md
-    - Exámenes viejos: examenes/README.md
-    - Extras: extras/README.md
   - Sobre la materia:
     - about/README.md
     - Programa de la materia: about/programa.md
@@ -115,15 +113,6 @@ nav:
   - Guías de ejercicios: 
     - ejercicios/README.md
     - Guía 1: ejercicios/guia1.md
-    - Guía 2: ejercicios/guia2.md
   - Trabajo Práctico: tps/README.md
-  - Evaluaciones pasadas: 
-    - examenes/README.md
-    - Primer parcial: examenes/primero.md
-    - Segundo parcial: examenes/segundo.md
-    - Final: examenes/final.md
-     
-       
-     
 
 
