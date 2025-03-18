@@ -20,7 +20,7 @@ theme:
     - navigation.tracking
     - toc.follow
   palette:
-    primary: indigo
+    primary: red
     accent: deep orange
   font:
     text: Roboto

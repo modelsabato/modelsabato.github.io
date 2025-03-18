@@ -1038,7 +1038,7 @@
 </li>
 <li>
 <ul>
-<li>Un paracaidista de 70 kg salta desde un globo aerostático fijo. El coeficiente de resistencia del aire es de aproximadamente 12.5 \frac{kg}{s} (tome la aceleración de la gravedad como 10 <span class="arithmatex">\(\frac{m}{s^2}\)</span>). Utilizando la expresión exacta evalúe la velocidad del paracaidista cada 2 s después del salto y calcule su velocidad límite. Grafique el resultado.</li>
+<li>Un paracaidista de 70 kg salta desde un globo aerostático fijo. El coeficiente de resistencia del aire es de aproximadamente 12.5 <span class="arithmatex">\(\frac{kg}{s}\)</span> (tome la aceleración de la gravedad como 10 <span class="arithmatex">\(\frac{m}{s^2}\)</span>). Utilizando la expresión exacta evalúe la velocidad del paracaidista cada 2 s después del salto y calcule su velocidad límite. Grafique el resultado.</li>
 <li>Repita el gráfico con la solución discreta, tomando intervalos de 2 s, 1 s y 0.5 s.</li>
 <li>Haga el mismo cálculo pero suponiendo ahora que la fuerza de rozamiento se debe expresar como <span class="arithmatex">\(F = – c' v^2\)</span> (tome c&rsquo; = 0.25 <span class="arithmatex">\(\frac{kg}{m}\)</span>).</li>
 </ul>
@@ -1050,20 +1050,43 @@
 \]</div>
 </li>
 <li>
-<p>El agua de un lago de zonas templadas puede dividirse en estratos térmicos. Cerca de la superficie el agua es tibia y liviana (epilimnion) y en el fondo más fría y densa (hipolimnion). Lo mismo sucede en reactores químicos. Ambas capas están separadas, aproximadamente, por un plano conocido por thermocline, donde la derivada segunda de la temperatura respecto de la profundidad se hace cero (o la derivada primera tiene su máximo). A esta profundidad el flujo de calor de la superficie al fondo de la capa se puede calcular con la ley de Fourier, <span class="arithmatex">\(J = -k\frac{dT}{dz}\)</span>. Dados los datos de la tabla siguiente, correspondientes a la temperatura del líquido de un reactor en función de la profundidad y usando el método de splines, realice un ajuste de la temperatura en función de la profundidad y de su derivada. Encuentre la posición aproximada de la thermocline y calcule el flujo de calor a través de la interfaz (tome <span class="arithmatex">\(k = 0.01 cal(s\;cm\;^\circ C)\)</span>)</p>
-<p>| <span class="arithmatex">\(z\;[m]\)</span>              | 0 | 0.5 | 1.0 | 1.5 | 2.0 | 2.5 | 3.0 |
-| :---------------- | :------: | ----: |
-| <span class="arithmatex">\(T\;[^\circ C]\)</span>        | 70 | 68 | 55 | 22 | 13 | 11 | 10 |</p>
+<p>El agua de un lago de zonas templadas puede dividirse en estratos térmicos. Cerca de la superficie el agua es tibia y liviana (epilimnion) y en el fondo más fría y densa (hipolimnion). Lo mismo sucede en reactores químicos. Ambas capas están separadas, aproximadamente, por un plano conocido por thermocline, donde la derivada segunda de la temperatura respecto de la profundidad se hace cero (o la derivada primera tiene su máximo). A esta profundidad el flujo de calor de la superficie al fondo de la capa se puede calcular con la ley de Fourier, <span class="arithmatex">\(J = -k\frac{dT}{dz}\)</span>. Dados los datos de la tabla siguiente, correspondientes a la temperatura del líquido de un reactor en función de la profundidad y usando el método de splines, realice un ajuste de la temperatura en función de la profundidad y de su derivada. Encuentre la posición aproximada de la thermocline y calcule el flujo de calor a través de la interfaz (tome <span class="arithmatex">\(k = 0.01\;cal(s\;cm\;^\circ C)\)</span>)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><span class="arithmatex">\(z\;[m]\)</span></th>
+<th style="text-align: left;">0</th>
+<th style="text-align: left;">0.5</th>
+<th style="text-align: left;">1.0</th>
+<th style="text-align: left;">1.5</th>
+<th style="text-align: left;">2.0</th>
+<th style="text-align: left;">2.5</th>
+<th style="text-align: left;">3.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(T\;[^\circ C]\)</span></td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;">68</td>
+<td style="text-align: left;">55</td>
+<td style="text-align: left;">22</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">10</td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
 <p>La fuerza efectiva que realiza el viento sobre el mástil de un bote de velas puede aproximarse por la siguiente expresión:</p>
 <div class="arithmatex">\[
-  F = \int_0^30 200 \left(\frac{z}{5+z}\right) e^{-\frac{2z}{30}} dz
+  F = \int_0^{30} 200 \left(\frac{z}{5+z}\right) e^{-\frac{2z}{30}} dz
 \]</div>
 <p>donde <span class="arithmatex">\(F\)</span> está dada en libras y las distancias en pies.</p>
 <p>Estime, utilizando los métodos de trapecios y de Simpson 1/3, cuánto vale la fuerza total y dónde será el punto de acción efectiva de esta fuerza.</p>
 <div class="arithmatex">\[
-  d = \frac{1}{F}\int_0^30 z f(z) dz
+  d = \frac{1}{F}\int_0^{30} z f(z) dz
 \]</div>
 <p>Utilice varios tamaños de paso de integración, entre 5 y 0.05 pies, y estudie la convergencia de cada método.</p>
 </li>
