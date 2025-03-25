@@ -1,9 +1,9 @@
 <table>
 <colgroup>
 <col style="width: 13%" />
-<col style="width: 17%" />
 <col style="width: 14%" />
-<col style="width: 54%" />
+<col style="width: 14%" />
+<col style="width: 57%" />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -16,8 +16,9 @@
 <td rowspan="7">Marzo</td>
 <td>1</td>
 <td>7/03</td>
-<td rowspan="2">Fundamentos Generales de modelización y Simulación
-Numérica</td>
+<td rowspan="2"><blockquote>
+<p>Fundamentos Generales de modelización y Simulación Numérica</p>
+</blockquote></td>
 </tr>
 <tr class="odd">
 <td>2</td>
@@ -26,8 +27,10 @@ Numérica</td>
 <tr class="even">
 <td>3</td>
 <td>14/03</td>
-<td rowspan="4">Repaso general de Cálculo Numérico. Introducción al
-lenguaje python: ejercitación y ejemplos</td>
+<td rowspan="4"><blockquote>
+<p>Repaso general de Cálculo Numérico. Introducción al lenguaje python:
+ejercitación y ejemplos</p>
+</blockquote></td>
 </tr>
 <tr class="odd">
 <td>4</td>
@@ -44,7 +47,9 @@ lenguaje python: ejercitación y ejemplos</td>
 <tr class="even">
 <td>7</td>
 <td>28/03</td>
-<td rowspan="4">Método de Diferencias Finitas. Aplicaciones</td>
+<td rowspan="4"><blockquote>
+<p>Método de Diferencias Finitas. Aplicaciones</p>
+</blockquote></td>
 </tr>
 <tr class="odd">
 <td rowspan="8">Abril</td>
@@ -62,8 +67,9 @@ lenguaje python: ejercitación y ejemplos</td>
 <tr class="even">
 <td>11</td>
 <td>11/04</td>
-<td rowspan="9">Método de Elementos Finitos. Oscilaciones y evolución
-temporal</td>
+<td rowspan="9"><blockquote>
+<p>Método de Elementos Finitos. Oscilaciones y evolución temporal</p>
+</blockquote></td>
 </tr>
 <tr class="odd">
 <td>12</td>
@@ -101,7 +107,9 @@ temporal</td>
 <tr class="odd">
 <td>20</td>
 <td>20/05</td>
-<td rowspan="4">Métodos de Monte Carlo y Dinámica Molecular</td>
+<td rowspan="4"><blockquote>
+<p>Métodos de Monte Carlo y Dinámica Molecular</p>
+</blockquote></td>
 </tr>
 <tr class="even">
 <td>21</td>
@@ -119,8 +127,9 @@ temporal</td>
 <td rowspan="6">Junio</td>
 <td>24</td>
 <td>03/06</td>
-<td rowspan="4">Breve introducción a los métodos de aprendizaje
-automático</td>
+<td rowspan="4"><blockquote>
+<p>Breve introducción a los métodos de aprendizaje automático</p>
+</blockquote></td>
 </tr>
 <tr class="even">
 <td>25</td>
@@ -137,7 +146,9 @@ automático</td>
 <tr class="odd">
 <td>28</td>
 <td>17/06</td>
-<td rowspan="2">Temas especiales dados por investigadores invitados</td>
+<td rowspan="2"><blockquote>
+<p>Temas especiales dados por investigadores invitados</p>
+</blockquote></td>
 </tr>
 <tr class="even">
 <td>29</td>
@@ -147,7 +158,9 @@ automático</td>
 <td>Julio</td>
 <td>Final</td>
 <td>A definir</td>
-<td>Exposición de un tema especial</td>
+<td><blockquote>
+<p>Exposición de un tema especial</p>
+</blockquote></td>
 </tr>
 </tbody>
 </table>
