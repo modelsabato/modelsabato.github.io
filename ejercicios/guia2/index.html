@@ -14,6 +14,10 @@
         <link rel="canonical" href="https://modelsabato.github.io/ejercicios/guia2/">
       
       
+        <link rel="prev" href="../guia1/">
+      
+      
+        <link rel="next" href="../../tps/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -246,10 +250,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -714,6 +720,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -780,6 +790,50 @@
   
   <span class="md-ellipsis">
     Teórica 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/teorica3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teórica 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clases/teorica4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teórica 4
     
   </span>
   
@@ -882,6 +936,8 @@
       
   
   
+    
+  
   
   
     
@@ -893,17 +949,22 @@
       
         
       
-    
-    
-      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -920,13 +981,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Guías de ejercicios
@@ -952,6 +1013,38 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Guía 2
+    
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -1020,16 +1113,15 @@
 
 
 <h1 id="guía-2">Guía 2<a class="headerlink" href="#guía-2" title="Permanent link">#</a></h1>
-<ol>
-<li>Se tiene una placa cuadrada de aluminio cuyos bordes están en las
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+1. Se tiene una placa cuadrada de aluminio cuyos bordes están en las
 condiciones que se indican en la figura: tres lados a temperaturas fijas
 y otro, el inferior, aislado térmicamente (flujo de calor igual a cero).
 Encuentre, utilizando el método de diferencias finitas, los valores de
 temperatura y flujo de calor para cada punto. Utilice primero la grilla
 señalada y luego generalice el problema a un número variable de nodos en
 cada eje de coordenadas. Haga un estudio del tiempo de cálculo en
-función del tamaño del sistema.</li>
-</ol>
+función del tamaño del sistema.</p>
 <p align="center">
  <img src="./chapa.png"
   style="width:4in;height:4.2in" />
@@ -1044,6 +1136,14 @@ distribución de temperaturas en función del tiempo. Tome que la barra
 tiene 10 cm de longitud y k = 0.835 cm<sup>2</sup>/s (aluminio). Haga los cálculos
 para $\Delta$x = 2 cm y $\Delta$t = 0.1 seg.
 Repítalos para $\Delta$t = 5 seg y compare sus resultados.
+=======
+1.  Se tiene una placa cuadrada de aluminio cuyos bordes están en las condiciones que se indican en la figura: tres lados a temperaturas fijas y otro, el inferior, aislado térmicamente (flujo de calor igual a cero). Encuentre, utilizando el método de diferencias finitas, los valores de temperatura y flujo de calor para cada punto. Utilice primero la grilla señalada y luego generalice el probl ma a un número variable de nodos en cada eje de coordenadas. Haga un estudio del tiempo de cálculo en función del tamaño del sistema.
+
+    ![Sistema ej 9](./img/chapa.png "Chapa ejercicio 1")
+
+
+1.  Se tiene una barra delgada de aluminio, originalmente a $0^\circ C$, cuyos extremos se someten repentinamente a temperaturas fijas. El extremo izquierdo se mantiene a una temperatura constante de $100^\circ C$ y el derecho a $50^\circ C$. Utilice los métodos explícito e implícito (Crank-Nicolson) de diferencias finitas para calcular la evolución de la distribución de temperaturas en función del tiempo. Tome que la barra tiene 10 cm de longitud y k = 0.835 $\frac{cm^2}{s}$ (aluminio). Haga los cálculos para $\Delta$x = 2 cm y $\Delta$t = 0.1 seg. Repítalos para $\Delta$t = 5 seg y compare sus resultados.
+>>>>>>> 16a827d3ae04a90845c41045cf8410be373bfb48
 Analice el comportamiento de la solución para los distintos regímenes.
 
 
@@ -1065,7 +1165,7 @@ Analice el comportamiento de la solución para los distintos regímenes.
     <span class="md-icon" title="Última actualización">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 de marzo de 2025 15:20:34">25 de marzo de 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 de marzo de 2025 18:46:43">25 de marzo de 2025</span>
   </span>
 
     
@@ -1076,11 +1176,12 @@ Analice el comportamiento de la solución para los distintos regímenes.
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contribuidores">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
       
     </span>
     <nav>
       
+        <a href="mailto:marzikg@gmail.com">GuillermoMarzik</a>, 
         <a href="mailto:ruweht@sol194.tandar.cnea.gov.ar">Ruben Weht</a>
     </nav>
   </span>
