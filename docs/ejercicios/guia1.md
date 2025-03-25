@@ -27,6 +27,31 @@
     | :---------------- | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
     | $T\;[^\circ C]$        | 70 | 68 | 55 | 22 | 13 | 11 | 10 |
 
+1.  Dados los siguientes valores experimentales de datos de porosidad ($P$) y medidas de módulo de indentación ($E$) junto con sus errores ($E_{error}$) obtenido por nanoindentación:
+
+    $$
+      P=[5,10,15,20,30,40]\;en\;\%
+    $$
+      
+    $$
+      E=[12,9,8,7,6,6]\;en\;GPa
+    $$
+    
+    $$
+      E_{error}=[2,1,1,2,1,2]\;en\;GPa
+    $$
+
+    -  Guarde los archivos en un .txt y en un .npy. ¿Cómo medirían el tiempo para cargarlo los datos desde cada uno? ¿Qué pasa si queremos cargar un archivo con 10 millones de datos en cada caso? ESto último lo pueden probar escribiendo 10 millones de números aleatorios.
+    -  Defina en Python una función de ajuste de los datos dada por la bibliografía, de la forma:
+
+    $$
+      E(P) = E_0\left(1-\frac{P}{100}\right)^m
+    $$
+    
+    donde $E_0$ y $m$ son parámetros a determinar, dependientes de los cálculos.
+
+    -  Grafique en un mismo gráfico los puntos experimentales junto a sus errores y el ajuste realizado en el inciso anterior.
+
 1.  La fuerza efectiva que realiza el viento sobre el mástil de un bote de velas puede aproximarse por la siguiente expresión:
     
     $$
