@@ -77,5 +77,5 @@
     con la condicióin de contorno $y(0) = 2$, desde $x = 0$ hasta $x = 4$, con varios tamaños de paso. Compare la exactitud de los diferentes métodos con el resultado exacto en $x = 4$, . Grafique este error en función del esfuerzo de cálculo realizado (cantidad de veces que tuvo que evaluar la función). Compare la soluciones numéricas obtenidas, $y(x)$, con la solución teórica:
 
     $$
-      y(x) = \frac{4}{1.3}(e^{0.8x} - e^-{0.5x}) + 2 e^-{0.5x}
+      y(x) = \frac{4}{1.3}(e^{0.8x} - e^{-0.5x}) + 2 e^{-0.5x}
     $$
