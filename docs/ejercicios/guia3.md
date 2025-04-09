@@ -22,7 +22,7 @@ longitud de 8 metros y el elemento 3 de 4 metros.
 Problema 3:
 
 Considere una barra con una carga axial aplicada de $T~=~-20~N/cm^2$, como se muestra en la figura. Determine el
-desplazamiento axial y la tensión. Tome $E~=~210~GPa$, $A~=~10~cm^$ y $L~=~1.50~m$. Use primero uno y luego dos elementos.
+desplazamiento axial y la tensión. Tome $E~=~210~GPa$, $A~=~10~cm^2$ y $L~=~1.50~m$. Use primero uno y luego dos elementos.
 Intente generalizarlo a $n$ elementos y compare sus resultados con la
 solución teórica:
 
@@ -33,7 +33,7 @@ $$d(x) = \frac{|T|}{6AE}\left( x^{3} - L^{3} \right);\sigma(x) = \frac{|T|}{2A}x
 Problema 4:
 
 Determine los desplazamientos y rotaciones y fuerzas y torques de
-vínculos para el sistema de la figura. Tome $E~=~210~GPa$ e $I~=~2~x~10^{–4} m^4$.
+vínculos para el sistema de la figura. Tome $E~=~210~GPa$ e $I~=~2.10^{–4} m^4$.
 
 ![Imagen 3-4](./img/img-3.4.png "Ejercicio 3-4")
 
