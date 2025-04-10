@@ -3,7 +3,7 @@
 Problema 1:
 
 Se desplaza el punto final del sistema de resortes mostrado en la
-figura, hasta unirlo a la pared. Todos los resortes tienen constantes $k~=~200~kN/m$, siendo el desplazamiento final de $\delta~=~20 mm$. Determine los desplazamientos de cada uno de los nodos, las fuerzas en cada elemento y
+figura, hasta unirlo a la pared. Todos los resortes tienen constantes $k~=~200~kN/m$, siendo el desplazamiento final de $\delta~=~20~mm$. Determine los desplazamientos de cada uno de los nodos, las fuerzas en cada elemento y
 las fuerzas globales (reacción de la pared y **F**).
 
    ![Imagen 3-1](./img/img-3.1.png "Ejercicio 3-1")
@@ -32,7 +32,7 @@ $$d(x) = \frac{|T|}{6AE}\left( x^{3} - L^{3} \right);\sigma(x) = \frac{|T|}{2A}x
 
 Problema 4:
 
-Determine los desplazamientos y rotaciones y fuerzas y torques de
+Determine los desplazamientos y rotaciones, y fuerzas y torques de
 vínculos para el sistema de la figura. Tome $E~=~210~GPa$ e $I~=~2.10^{–4} m^4$.
 
 ![Imagen 3-4](./img/img-3.4.png "Ejercicio 3-4")
