@@ -114,6 +114,8 @@ nav:
     - Práctica:
       - Intro a Git y GitHub: clases/git.md
       - Guía 1, notebook: clases/guia1_notebook.md
+      - MEF-01, prob. mixtos: clases/mef01.md
+      - MEF-02, ensamble mat: clases/mef02.md
   - Guías de ejercicios: 
     - ejercicios/README.md
     - Guía 1: ejercicios/guia1.md
