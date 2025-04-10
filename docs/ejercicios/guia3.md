@@ -6,8 +6,12 @@ Se desplaza el punto final del sistema de resortes mostrado en la
 figura, hasta unirlo a la pared. Todos los resortes tienen constantes $k~=~200~kN/m$, siendo el desplazamiento final de $\delta~=~20 mm$. Determine los desplazamientos de cada uno de los nodos, las fuerzas en cada elemento y
 las fuerzas globales (reacción de la pared y **F**).
 
+<<<<<<< HEAD
    ![Sistema ej 9](./img/chapa.png "Chapa ejercicio 1")
 ![Imagen 3-1](./img/img-3.1.png "Ejercicio 3-1")
+=======
+![Imagen 3-1](../img/img-3.1.png "Ejercicio 3-1")
+>>>>>>> 050d0df7c3ab68fdc54b3cde076edb0b179ee43b
 
 Problema 2:
 
