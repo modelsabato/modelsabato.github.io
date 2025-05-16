@@ -17,3 +17,4 @@ convergencia.
 
     ![Imagen 4-2](./img/img-4-2.png "Ejercicio 4-2")
 
+[mefmods.py](https://drive.google.com/file/d/1nfU2NxZRvhO2vL4eMbPMBbBJ5wqe85nD/view?usp=sharing)
