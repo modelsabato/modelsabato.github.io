@@ -123,6 +123,7 @@ nav:
       - MEF-02, ensamble mat: clases/mef02.md
       - Elementos Axisimetricos: clases/axisimetricos.md
       - Ejercicio 1, guía 5: clases/ejercicio-5-1.md
+      - Transporte neutrónico, Monte Carlo: clases/mc_transporte.md
   - Guías de ejercicios: 
     - ejercicios/README.md
     - Guía 1: ejercicios/guia1.md
