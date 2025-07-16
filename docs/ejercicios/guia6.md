@@ -13,7 +13,7 @@ sistema. Esta es una forma numérica usual de considerar un sistema
 infinito.
 
 Tome como configuración inicial del sistema una asignación aleatoria de
-1 o -1 para cada spin. Luego de verificar que el programa funcione
+1 o -1 para cada espin. Luego de verificar que el programa funcione
 calcule los valores medios de las magnitudes físicas de interés. Tome
 para los cálculos kB=1
 
