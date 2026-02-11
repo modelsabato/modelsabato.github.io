@@ -49,6 +49,8 @@ ejercitación y ejemplos</p>
 <td>27/03</td>
 <td rowspan="2"><blockquote>
 <p>Introducción al Método de Diferencias Finitas. Aplicaciones</p>
+</blockquote></td>
+</tr>
 <tr class="even">
 <td>8</td>
 <td>31/03</td>
