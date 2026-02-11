@@ -13,7 +13,7 @@
 <td><strong>Tema</strong></td>
 </tr>
 <tr class="even">
-<td rowspan="7">Marzo</td>
+<td rowspan="8">Marzo</td>
 <td>1</td>
 <td>3/03</td>
 <td rowspan="2"><blockquote>
@@ -47,8 +47,11 @@ ejercitación y ejemplos</p>
 <tr class="even">
 <td>7</td>
 <td>27/03</td>
-<td rowspan="4"><blockquote>
-<p>Método de Diferencias Finitas. Aplicaciones</p>
+<td rowspan="2"><blockquote>
+<p>Introducción al Método de Diferencias Finitas. Aplicaciones</p>
+<tr class="even">
+<td>8</td>
+<td>31/03</td>
 </blockquote></td>
 </tr>
 </tbody>
