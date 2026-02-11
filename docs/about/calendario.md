@@ -38,11 +38,11 @@ ejercitación y ejemplos</p>
 </tr>
 <tr class="even">
 <td>5</td>
-<td>20/03</td>
+<td>17/03</td>
 </tr>
 <tr class="odd">
 <td>6</td>
-<td>24/03</td>
+<td>20/03</td>
 </tr>
 <tr class="even">
 <td>7</td>
