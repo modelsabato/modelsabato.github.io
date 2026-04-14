@@ -113,7 +113,8 @@ nav:
       - Teórica 5: clases/teorica5.md
       - Teórica 6: clases/teorica6.md
     - Práctica:
-      - Intro a Git y GitHub: clases/git.md 
+      - Intro a Git y GitHub: clases/git.md
+      - Ejercicio 2, guía 2: clases/guia2_diffinitas.md
   - Guías de ejercicios: 
     - ejercicios/README.md
     - Guía 1: ejercicios/guia1.md
