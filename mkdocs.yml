@@ -113,9 +113,14 @@ nav:
       - Teórica 5: clases/teorica5.md
       - Teórica 6: clases/teorica6.md
     - Práctica:
+<<<<<<< HEAD
       - Intro a Git y GitHub: clases/git.md 
       - MEF Sistemas Mixtos: clases/mef01.md 
       - MEF Ensamble de Matrices: clases/mef02.md 
+=======
+      - Intro a Git y GitHub: clases/git.md
+      - Ejercicio 2, guía 2: clases/guia2_diffinitas.md
+>>>>>>> 799b7098fad254ba4c885c0aec9b1189d906ff0d
   - Guías de ejercicios: 
     - ejercicios/README.md
     - Guía 1: ejercicios/guia1.md
