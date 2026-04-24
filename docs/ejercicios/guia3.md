@@ -8,7 +8,8 @@
 
     ![Imagen 3-2](./img/img-3-2.png "Ejercicio 3-2")
 
-1. Considere una barra con una carga axial aplicada de $T~=~-20~N/cm^2$, como se muestra en la figura. Determine el desplazamiento axial y la tensión. Tome $E~=~210~GPa$, $A~=~10~cm^2$ y $L~=~1.50~m$. Use primero uno y luego dos elementos. Intente generalizarlo a $n$ elementos y compare sus resultados con la solución teórica:
+        
+1. Considere una barra con una carga axial aplicada de $T~=~-10~N/cm^2$, como se muestra en la figura. Determine el desplazamiento axial y la tensión. Tome $E~=~30x10^{6}~N/cm^2$, $A~=~2~cm^2$ y $L~=~60~cm$. Use primero uno y luego dos elementos. Intente generalizarlo a $n$ elementos y compare sus resultados con la solución teórica:
 
     $$d(x) = \frac{|T|}{6AE}\left( x^{3} - L^{3} \right);\sigma(x) = \frac{|T|}{2A}x^{2}$$
 
