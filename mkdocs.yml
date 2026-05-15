@@ -121,6 +121,7 @@ nav:
       - MEF Ensamble de Matrices: clases/mef02.md 
       - Ejercicio 3_2, Datos: clases/Prob_3_2_datos.md
       - Ejercicio 3_2, Matrices: clases/Prob_3_2_matrices.md
+      - Matriz de nodos y de conectividad con GMSH: clases/gmsh.md
   - Guías de ejercicios: 
     - ejercicios/README.md
     - Guía 1: ejercicios/guia1.md
