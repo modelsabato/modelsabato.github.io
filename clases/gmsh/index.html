@@ -11,9 +11,13 @@
       
       
       
-        <link rel="canonical" href="https://modelsabato.github.io/ejercicios/guia6/">
+        <link rel="canonical" href="https://modelsabato.github.io/clases/gmsh/">
       
       
+        <link rel="prev" href="../Prob_3_2_matrices/">
+      
+      
+        <link rel="next" href="../../ejercicios/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -21,7 +25,7 @@
     
     
       
-        <title>Guia6 - Modelización de Propiedades y Procesos</title>
+        <title>Matriz de nodos y de conectividad con GMSH - Modelización de Propiedades y Procesos</title>
       
     
     
@@ -91,6 +95,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#archivo-ejemplo-de-armado-de-matrices-de-nodos-y-conectividad" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -122,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Guia6
+              Matriz de nodos y de conectividad con GMSH
             
           </span>
         </div>
@@ -223,11 +232,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../clases/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -247,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../" class="md-tabs__link">
+        <a href="../../ejercicios/" class="md-tabs__link">
           
   
     
@@ -398,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -419,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../ejercicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -620,6 +631,8 @@
       
   
   
+    
+  
   
   
     
@@ -640,17 +653,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../clases/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -667,7 +680,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Diapositivas de las clases
@@ -736,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/teorica1/" class="md-nav__link">
+      <a href="../teorica1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/teorica2/" class="md-nav__link">
+      <a href="../teorica2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -778,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/teorica3/" class="md-nav__link">
+      <a href="../teorica3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -799,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/teorica4/" class="md-nav__link">
+      <a href="../teorica4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -820,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/teorica5/" class="md-nav__link">
+      <a href="../teorica5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/teorica6/" class="md-nav__link">
+      <a href="../teorica6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -862,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/teorica7/" class="md-nav__link">
+      <a href="../teorica7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -888,8 +901,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -913,12 +928,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -932,7 +947,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Práctica
@@ -946,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/git/" class="md-nav__link">
+      <a href="../git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/git/" class="md-nav__link">
+      <a href="../git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/guia2_diffinitas/" class="md-nav__link">
+      <a href="../guia2_diffinitas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1009,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/mef01/" class="md-nav__link">
+      <a href="../mef01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1030,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/mef02/" class="md-nav__link">
+      <a href="../mef02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1051,7 +1066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/Prob_3_2_datos/" class="md-nav__link">
+      <a href="../Prob_3_2_datos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1072,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clases/Prob_3_2_matrices/" class="md-nav__link">
+      <a href="../Prob_3_2_matrices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1090,10 +1105,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../clases/gmsh/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1102,6 +1126,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1160,7 +1185,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../ejercicios/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1193,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guia1/" class="md-nav__link">
+      <a href="../../ejercicios/guia1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1214,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guia2/" class="md-nav__link">
+      <a href="../../ejercicios/guia2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1235,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guia3/" class="md-nav__link">
+      <a href="../../ejercicios/guia3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1256,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guia4/" class="md-nav__link">
+      <a href="../../ejercicios/guia4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1294,6 +1319,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1308,59 +1335,8 @@
                   
 
 
-  <h1>Guia6</h1>
-
-<ol>
-<li>Método de Monte Carlo</li>
-</ol>
-<p>Implementación del algoritmo de Metrópolis para una red cuadrada de
-spines, con el Hamiltoniano dado en la teórica. Se obtendrá una
-colección representativa de distintos estados del <em>ensemble</em> canónico.
-Considerar una red cuadrada de <span class="arithmatex">\(20\times20\)</span> espines.</p>
-<p>Condiciones de contorno periódicas: Estas condiciones se utilizan para
-suprimir los efectos de borde. Se busca estudiar la magnetización como
-si estuviera en el seno de un material magnético (<em>bulk</em>), sin
-considerar los efectos particulares de las superficies o bordes del
-sistema. Esta es una forma numérica usual de considerar un sistema
-infinito.</p>
-<p>Tome como configuración inicial del sistema una asignación aleatoria de
-1 o -1 para cada espin. Luego de verificar que el programa funcione
-calcule los valores medios de las magnitudes físicas de interés. Tome
-para los cálculos kB=1</p>
-<p>1. Presentar gráficos de las siguientes cantidades como función de la
-temperatura:</p>
-<ul>
-<li>
-<p>Magnetización media</p>
-</li>
-<li>
-<p>Energía media</p>
-</li>
-</ul>
-<p>2. Calcule el calor específico por partícula y la susceptibilidad a
-campo nulo.</p>
-<p>3. Discutir brevemente los efectos de tamaño finito, debidos a que las
-muestras usadas en la simulación tienen un número de espines pequeño en
-comparación con el límite termodinámico.</p>
-<p>4. A partir de la curva de M vs. T estime la temperatura crítica Tc.
-Explique qué observa con los valores medios de M a medida que se acerca
-al punto crítico. Tome como referencia que la temperatura crítica del
-cálculo exacto es Tc = 2,269.</p>
-<p><strong><u>Sugerencias:</u></strong></p>
-<p>Implementar primero el algoritmo de Monte Carlo y luego de confirmar que
-está funcionando, agregue las cantidades a medir.</p>
-<p>La configuración inicial, al ser aleatoria, pone al sistema en un punto
-del espacio de fases, que seguramente no será de equilibrio respecto de
-las condiciones físicas. Realice una primera corrida, de la cual no
-promediará datos, para <em>termalizar</em> al sistema. Es decir, llegar al
-equilibrio compatible con las condiciones físicas impuestas. Luego
-realice otra simulación, desde donde termina la anterior, en la que sí
-se medirán las magnitudes de interés.</p>
-<p>La llegada al equilibrio puede verificarse observando que la energía,
-por ejemplo, fluctúa respecto de un dado valor en lugar de tener derivas
-al observar un gráfico de energía vs. paso de Monte Carlo.</p>
-<p>Fíjese como no hace falta calcular la energía total de cada
-configuración, si no sólo la diferencia de energía.</p>
+<h1 id="archivo-ejemplo-de-armado-de-matrices-de-nodos-y-conectividad">Archivo ejemplo de armado de matrices de nodos y conectividad<a class="headerlink" href="#archivo-ejemplo-de-armado-de-matrices-de-nodos-y-conectividad" title="Permanent link">#</a></h1>
+<p><a href="https://drive.google.com/file/d/1ZSfo68mIXQZNAwf7TmiNeHk9-pLFMY82/view?usp=drive_link">Archivo</a></p>
 
 
 
@@ -1381,7 +1357,7 @@ configuración, si no sólo la diferencia de energía.</p>
     <span class="md-icon" title="Última actualización">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 15, 2026</span>
   </span>
 
     
@@ -1397,7 +1373,7 @@ configuración, si no sólo la diferencia de energía.</p>
     </span>
     <nav>
       
-        <a href="mailto:ruweht@sol194.tandar.cnea.gov.ar">Ruben Weht</a>
+        <a href="mailto:marzikg@gmail.com">GuillermoMarzik</a>
     </nav>
   </span>
 
