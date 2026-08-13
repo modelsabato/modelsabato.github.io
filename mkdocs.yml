@@ -117,6 +117,7 @@ nav:
       - Teórica 9: clases/teorica9.md
       - Teórica 10: clases/teorica10.md
       - Algo de DFT: clases/dft.md
+      - Algo de aprendizaje automático: clases/ml.md  
     - Práctica:
       - Intro a Git y GitHub: clases/git.md
       - Ejercicio 2, guía 2: clases/guia2_diffinitas.md
